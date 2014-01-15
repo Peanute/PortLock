@@ -1,0 +1,3 @@
+portlock:
+  cooldown: 125
+  active: true

@@ -1,0 +1,29 @@
+name: PortLock
+description: Blocking playerteleporting while in combat
+main: org.mrsteakhouse.portlock.PortLock
+version: 1.0
+commands:
+  portlock:
+    description: main command
+    usage: /<command>
+permissions:
+  portlock.*:
+    description: aktiviert alles
+    children:
+      portlock.reload: true
+      portlock.toggle: true
+      portlock.cooldown: true
+      portlock.ignore: true
+      
+  portlock.reload:
+    description: laedt die konfigurationen neu
+    default: false
+  portlock.toggle:
+    description: plugn aktivieren/deaktivieren
+    default: false
+  portlock.cooldown:
+    description: erlaubt es die cooldown zu veraendern
+    default: false
+  portlock.ignore:
+    description: gibt die erlaubnis vom plugin ignoriert zu werden
+    default: false
