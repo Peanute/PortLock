@@ -1,0 +1,7 @@
+commands:
+	/portlock cooldown <zahl>: zeit, bis man sich wieder teleportieren kann setzen. perm: portlock.cooldown
+	/portlock reload: speicher und lädt die config. perm: portlock.reload
+	/portlock toggle [on|off]: aktiviert bzw deaktiviert die funktion. /portlock toggle funktioniert auch perm: portlock.toggle
+	
+restliche permissions:
+	portlock.ignore: alle spieler mit diesem recht werden vom plugin ignoriert.
