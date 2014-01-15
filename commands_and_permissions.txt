@@ -1,7 +1,7 @@
 commands:
-	/portlock cooldown <zahl>: zeit, bis man sich wieder teleportieren kann setzen. perm: portlock.cooldown
+	/portlock cooldown <zahl>: zeit, bis man sich wieder teleportieren kann setzen. ich kann keine genaue zeitangabe geben auf meinem server entsprachen 125 ~5 sekunden, einfach mal testen. perm: portlock.cooldown
 	/portlock reload: speicher und lädt die config. perm: portlock.reload
-	/portlock toggle [on|off]: aktiviert bzw deaktiviert die funktion. /portlock toggle funktioniert auch perm: portlock.toggle
+	/portlock toggle [on|off]: aktiviert bzw deaktiviert die funktion. /portlock toggle ohne on oder off funktioniert auch. perm: portlock.toggle
 	
 restliche permissions:
 	portlock.ignore: alle spieler mit diesem recht werden vom plugin ignoriert.
