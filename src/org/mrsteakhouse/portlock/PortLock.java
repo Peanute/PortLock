@@ -23,6 +23,8 @@ public class PortLock extends JavaPlugin{
 	private int combatCooldown = 5000;
 	private boolean active = true;
 	private String prefix = ChatColor.GOLD + "[PortLock] " + ChatColor.RESET;
+	private boolean ignoreFallDamage = false;
+	private boolean ignoreFallingBlock = false;
 	
 	@Override
 	public void onEnable() {
@@ -58,6 +60,8 @@ public class PortLock extends JavaPlugin{
 		
 		combatCooldown = cs.getInt("cooldown");
 		active = cs.getBoolean("active");
+		ignoreFallDamage = cs.getBoolean("ignorefalldamage");
+		ignoreFallingBlock = cs.getBoolean("ignorefallingblock");
 	}
 	
 	public void save() {
@@ -66,6 +70,8 @@ public class PortLock extends JavaPlugin{
 		ConfigurationSection cs = config.getConfigurationSection("portlock");
 		cs.set("cooldown", combatCooldown);
 		cs.set("atvive", active);
+		cs.set("ignorefalldamage", ignoreFallDamage);
+		cs.set("ignorefallingblock", ignoreFallingBlock);
 		
 		try {
 			config.save(file);
@@ -123,5 +129,30 @@ public class PortLock extends JavaPlugin{
 			return false;
 		}
 		return true;
+	}
+	
+	public boolean isBoolean(String str) {
+		try {
+			Boolean.parseBoolean(str);
+		} catch(Exception e) {
+			return false;
+		}
+		return true;
+	}
+	
+	public boolean isIgnoreFallDamage() {
+		return ignoreFallDamage;
+	}
+	
+	public void setIgnoreFallDamage(boolean bool) {
+		this.ignoreFallDamage = bool;
+	}
+	
+	public boolean isIgnoreFallingBlock() {
+		return ignoreFallingBlock;
+	}
+	
+	public void isIgnoreFallingBlock(boolean bool) {
+		this.ignoreFallingBlock = bool;
 	}
 }

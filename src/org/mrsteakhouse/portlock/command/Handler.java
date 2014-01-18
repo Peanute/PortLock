@@ -31,6 +31,8 @@ public class Handler implements CommandExecutor
 		  commands.put("reload", new Reload(plugin));
 		  commands.put("toggle", new Toggle(plugin));
 		  commands.put("cooldown", new Cooldown(plugin));
+		  commands.put("togglefall", new FallDamage(plugin));
+		  commands.put("toggleblock", new FallingBlock(plugin));
 	}
 	
 	public boolean onCommand(CommandSender sender, Command cmd1, String commandLabel, String[] args)

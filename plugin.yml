@@ -14,6 +14,8 @@ permissions:
       portlock.toggle: true
       portlock.cooldown: true
       portlock.ignore: true
+      portlock.togglefall: true
+      portlock.toggleblock: true
       
   portlock.reload:
     description: laedt die konfigurationen neu
@@ -27,3 +29,8 @@ permissions:
   portlock.ignore:
     description: gibt die erlaubnis vom plugin ignoriert zu werden
     default: false
+  portlock.togglefall:
+    description: erlaubt das aendern von ingorefalldamage
+    default: false
+  portlock.toggleblock:
+    description: erlaubt das aendern von ignorefallingblock

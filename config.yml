@@ -1,3 +1,5 @@
 portlock:
   cooldown: 125
   active: true
+  ignorefalldamage: false
+  ignorefallingblock: false
